@@ -34,84 +34,19 @@ function BGM () {
     music.playTone(294, music.beat(BeatFraction.Quarter))
     music.playTone(349, music.beat(BeatFraction.Double))
     music.playTone(440, music.beat(BeatFraction.Quarter))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(262, music.beat(BeatFraction.Half))
+    music.playTone(294, music.beat(BeatFraction.Quarter))
     music.playTone(349, music.beat(BeatFraction.Half))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(349, music.beat(BeatFraction.Half))
-    music.playTone(370, music.beat(BeatFraction.Half))
-    music.playTone(294, music.beat(BeatFraction.Half))
-    music.playTone(349, music.beat(BeatFraction.Half))
-    music.playTone(294, music.beat(BeatFraction.Half))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(349, music.beat(BeatFraction.Half))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(415, music.beat(BeatFraction.Eighth))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(440, music.beat(BeatFraction.Half))
-    music.playTone(349, music.beat(BeatFraction.Half))
-    music.playTone(370, music.beat(BeatFraction.Half))
-    music.playTone(294, music.beat(BeatFraction.Half))
-    music.playTone(349, music.beat(BeatFraction.Half))
-    music.playTone(294, music.beat(BeatFraction.Half))
+    music.playTone(523, music.beat(BeatFraction.Whole))
+    music.playTone(349, music.beat(BeatFraction.Whole))
+    music.playTone(392, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Half))
+    music.playTone(294, music.beat(BeatFraction.Quarter))
+    music.playTone(349, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Half))
+    music.playTone(294, music.beat(BeatFraction.Quarter))
+    music.playTone(349, music.beat(BeatFraction.Whole))
 }
 function Title_page () {
     scene.setBackgroundImage(img`
@@ -452,18 +387,18 @@ if (blockSettings.readNumber("Character is selected") == 1) {
     Josh.setImage(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . 2 . . . . . 2 2 2 . . . . 
+        . . . 2 2 . . . 2 2 2 2 . . . . 
+        . . . 2 2 2 . 2 2 2 2 2 . . . . 
+        . . . 2 2 2 2 2 2 2 2 . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . 2 2 2 2 2 2 . . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . 2 2 2 2 2 2 2 2 2 . . . . 
+        . . . 2 2 2 2 2 . 2 2 2 2 . . . 
+        . . 2 2 2 2 2 2 . . 2 2 2 . . . 
+        . . 2 2 2 . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)
@@ -472,18 +407,18 @@ if (blockSettings.readNumber("Character is selected") == 2) {
     Lincoln.setImage(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . 2 . . . . . 2 2 2 . . . . 
+        . . . 2 2 . . . 2 2 2 2 . . . . 
+        . . . 2 2 2 . 2 2 2 2 2 . . . . 
+        . . . 2 2 2 2 2 2 2 2 . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . . . 2 2 2 2 2 . . . . . . 
+        . . . . 2 2 2 2 2 2 . . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . 2 2 2 2 2 2 2 2 2 . . . . 
+        . . . 2 2 2 2 2 . 2 2 2 2 . . . 
+        . . 2 2 2 2 2 2 . . 2 2 2 . . . 
+        . . 2 2 2 . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)

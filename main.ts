@@ -2,7 +2,7 @@ namespace SpriteKind {
     export const BackgroundP = SpriteKind.create()
     export const Cursor = SpriteKind.create()
 }
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     blockSettings.clear()
     game.reset()
 })
@@ -200,7 +200,7 @@ function Title_page () {
     pause(1500)
 }
 function PickCharacter () {
-    if (blockSettings.readNumber("Character is selected") != 1) {
+    if (!(blockSettings.exists("Character is selected"))) {
         scene.setBackgroundImage(img`
             c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
             c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 

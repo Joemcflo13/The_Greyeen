@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const BackgroundP = SpriteKind.create()
+    export const Cursor = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     blockSettings.clear()
@@ -360,6 +361,24 @@ function PickCharacter () {
             `, SpriteKind.BackgroundP)
         Josh.setPosition(41, 60)
         Lincoln.setPosition(111, 60)
+        sprites.setDataSprite(Josh, "Josh", Josh)
+        sprites.setDataSprite(Lincoln, "Lincoln", Lincoln)
+        Cursor_start = sprites.create(img`
+            . . . . . . . 5 . . . . . . . 
+            . . . . . . . 5 . . . . . . . 
+            . . . . . . 5 5 5 . . . . . . 
+            . . . . . 5 5 5 5 5 . . . . . 
+            . . . . . 5 5 5 5 5 . . . . . 
+            . . . . 5 5 5 5 5 5 5 . . . . 
+            . . . 5 5 5 5 5 5 5 5 5 . . . 
+            . . . 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+            `, SpriteKind.Cursor)
+        Cursor_start.setPosition(41, 70)
+        characterselectishappening = 1
     }
 }
 function StartGame () {
@@ -367,8 +386,21 @@ function StartGame () {
 }
 let Lincoln: Sprite = null
 let Josh: Sprite = null
+let Cursor_start: Sprite = null
+let characterselectishappening = 0
+characterselectishappening = 0
 Title_page()
 PickCharacter()
+while (characterselectishappening == 1) {
+    if (controller.left.isPressed()) {
+        Cursor_start.setPosition(41, 70)
+        characterselectishappening += 0
+    }
+    if (controller.right.isPressed()) {
+        Cursor_start.setPosition(111, 70)
+        characterselectishappening += 0
+    }
+}
 forever(function () {
     BGM()
 })

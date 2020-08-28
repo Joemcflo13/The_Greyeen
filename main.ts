@@ -383,19 +383,20 @@ function PickCharacter () {
             if (controller.left.isPressed()) {
                 Cursor_start.setPosition(41, 70)
                 if (controller.A.isPressed()) {
-                    Josh.destroy()
+                    Lincoln.destroy()
+                    blockSettings.writeNumber("Character is selected", 1)
                 }
                 characterselectishappening += 0
             }
             if (controller.right.isPressed()) {
                 Cursor_start.setPosition(111, 70)
                 if (controller.A.isPressed()) {
-                    Lincoln.destroy()
+                    Josh.destroy()
+                    blockSettings.writeNumber("Character is selected", 2)
                 }
                 characterselectishappening += 0
             }
         }
-        blockSettings.writeNumber("Character is selected", 1)
     }
 }
 function StartGame () {
@@ -408,6 +409,46 @@ let characterselectishappening = 0
 characterselectishappening = 0
 Title_page()
 PickCharacter()
+if (blockSettings.readNumber("Character is selected") == 1) {
+    Josh.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+}
+if (blockSettings.readNumber("Character is selected") == 2) {
+    Lincoln.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+}
 forever(function () {
     BGM()
 })

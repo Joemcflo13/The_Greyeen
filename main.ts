@@ -352,25 +352,6 @@ function PickCharacter () {
             5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
             `, SpriteKind.Cursor)
         Cursor_start.setPosition(41, 70)
-        characterselectishappening = 1
-        if (characterselectishappening == 1) {
-            if (controller.left.isPressed()) {
-                Cursor_start.setPosition(41, 70)
-                if (controller.A.isPressed()) {
-                    Lincoln.destroy()
-                    blockSettings.writeNumber("Character is selected", 1)
-                }
-                characterselectishappening += 0
-            }
-            if (controller.right.isPressed()) {
-                Cursor_start.setPosition(111, 70)
-                if (controller.A.isPressed()) {
-                    Josh.destroy()
-                    blockSettings.writeNumber("Character is selected", 2)
-                }
-                characterselectishappening += 0
-            }
-        }
     }
 }
 function StartGame () {
@@ -380,49 +361,67 @@ let Cursor_start: Sprite = null
 let Lincoln: Sprite = null
 let Josh: Sprite = null
 let characterselectishappening = 0
-characterselectishappening = 0
 Title_page()
 PickCharacter()
-if (blockSettings.readNumber("Character is selected") == 1) {
-    Josh.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . 2 . . . . . 2 2 2 . . . . 
-        . . . 2 2 . . . 2 2 2 2 . . . . 
-        . . . 2 2 2 . 2 2 2 2 2 . . . . 
-        . . . 2 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . 2 2 2 2 2 . . . . . . 
-        . . . . 2 2 2 2 2 2 . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . 2 2 2 2 2 2 2 2 2 . . . . 
-        . . . 2 2 2 2 2 . 2 2 2 2 . . . 
-        . . 2 2 2 2 2 2 . . 2 2 2 . . . 
-        . . 2 2 2 . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
-}
-if (blockSettings.readNumber("Character is selected") == 2) {
-    Lincoln.setImage(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . 2 . . . . . 2 2 2 . . . . 
-        . . . 2 2 . . . 2 2 2 2 . . . . 
-        . . . 2 2 2 . 2 2 2 2 2 . . . . 
-        . . . 2 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . 2 2 2 2 2 . . . . . . 
-        . . . . 2 2 2 2 2 2 . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . 2 2 2 2 2 2 2 2 2 . . . . 
-        . . . 2 2 2 2 2 . 2 2 2 2 . . . 
-        . . 2 2 2 2 2 2 . . 2 2 2 . . . 
-        . . 2 2 2 . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
-}
+characterselectishappening = 1
 forever(function () {
     BGM()
+    if (characterselectishappening == 1) {
+        if (controller.left.isPressed()) {
+            Cursor_start.setPosition(41, 100)
+            if (controller.A.isPressed()) {
+                Lincoln.destroy()
+                characterselectishappening += 0
+                blockSettings.writeNumber("Character is selected", 1)
+            }
+        }
+        if (controller.right.isPressed()) {
+            Cursor_start.setPosition(111, 100)
+            if (controller.A.isPressed()) {
+                Josh.destroy()
+                characterselectishappening += 0
+                blockSettings.writeNumber("Character is selected", 2)
+            }
+        }
+    }
+    if (blockSettings.readNumber("Character is selected") == 1) {
+        Josh.setImage(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 2 . . . . . 2 2 2 . . . . 
+            . . . 2 2 . . . 2 2 2 2 . . . . 
+            . . . 2 2 2 . 2 2 2 2 2 . . . . 
+            . . . 2 2 2 2 2 2 2 2 . . . . . 
+            . . . . 2 2 2 2 2 2 2 . . . . . 
+            . . . . . 2 2 2 2 2 . . . . . . 
+            . . . . 2 2 2 2 2 2 . . . . . . 
+            . . . . 2 2 2 2 2 2 2 . . . . . 
+            . . . 2 2 2 2 2 2 2 2 2 . . . . 
+            . . . 2 2 2 2 2 . 2 2 2 2 . . . 
+            . . 2 2 2 2 2 2 . . 2 2 2 . . . 
+            . . 2 2 2 . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `)
+    }
+    if (blockSettings.readNumber("Character is selected") == 2) {
+        Lincoln.setImage(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 2 . . . . . 2 2 2 . . . . 
+            . . . 2 2 . . . 2 2 2 2 . . . . 
+            . . . 2 2 2 . 2 2 2 2 2 . . . . 
+            . . . 2 2 2 2 2 2 2 2 . . . . . 
+            . . . . 2 2 2 2 2 2 2 . . . . . 
+            . . . . . 2 2 2 2 2 . . . . . . 
+            . . . . 2 2 2 2 2 2 . . . . . . 
+            . . . . 2 2 2 2 2 2 2 . . . . . 
+            . . . 2 2 2 2 2 2 2 2 2 . . . . 
+            . . . 2 2 2 2 2 . 2 2 2 2 . . . 
+            . . 2 2 2 2 2 2 . . 2 2 2 . . . 
+            . . 2 2 2 . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `)
+    }
 })

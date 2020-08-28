@@ -2,7 +2,7 @@ namespace SpriteKind {
     export const BackgroundP = SpriteKind.create()
     export const Cursor = SpriteKind.create()
 }
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     blockSettings.clear()
     game.reset()
 })
@@ -200,7 +200,7 @@ function Title_page () {
     pause(1500)
 }
 function PickCharacter () {
-    if (true) {
+    if (blockSettings.readNumber("Character is selected") != 1) {
         scene.setBackgroundImage(img`
             c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
             c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
@@ -379,28 +379,35 @@ function PickCharacter () {
             `, SpriteKind.Cursor)
         Cursor_start.setPosition(41, 70)
         characterselectishappening = 1
+        if (characterselectishappening == 1) {
+            if (controller.left.isPressed()) {
+                Cursor_start.setPosition(41, 70)
+                if (controller.A.isPressed()) {
+                    Josh.destroy()
+                }
+                characterselectishappening += 0
+            }
+            if (controller.right.isPressed()) {
+                Cursor_start.setPosition(111, 70)
+                if (controller.A.isPressed()) {
+                    Lincoln.destroy()
+                }
+                characterselectishappening += 0
+            }
+        }
+        blockSettings.writeNumber("Character is selected", 1)
     }
 }
 function StartGame () {
 	
 }
+let Cursor_start: Sprite = null
 let Lincoln: Sprite = null
 let Josh: Sprite = null
-let Cursor_start: Sprite = null
 let characterselectishappening = 0
 characterselectishappening = 0
 Title_page()
 PickCharacter()
-while (characterselectishappening == 1) {
-    if (controller.left.isPressed()) {
-        Cursor_start.setPosition(41, 70)
-        characterselectishappening += 0
-    }
-    if (controller.right.isPressed()) {
-        Cursor_start.setPosition(111, 70)
-        characterselectishappening += 0
-    }
-}
 forever(function () {
     BGM()
 })

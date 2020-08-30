@@ -15,12 +15,12 @@
         "tilemapTile": true
     },
     "tile3": {
-        "data": "hwQQABAAAABE393f3f9EvETf3d/dT0S7RP//391PRKv/T0Tf/U9Eu91PRN/dT0S83U9P393//8v9T0T//9/du91PRE9E392r3U9ET0/f3bzdT09PRN/du91PRE9E39+63f//T0Tf3av/391PRN/dy/////////+//////1///7/////u7u7urw==",
+        "data": "hwQQABAAAAD/////////v/////////+//////////6//////////v/////////+////////1/8//7u7u7u7uvv/u7u7u7u6u/+7u7u7u7r7///////X/v/////////+//////////6//////////z/////////+//////////7//////////rw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
     "tile4": {
-        "data": "hwQQABAAAABE393f3f9ET0Tf3d/dT0RPRP//391PRE//T0Tf/U9E/91PRN/dT0Tf3U9P393//9/9T0T//9/d391PRE9E393f3U9ET0/f3d/dT09PRN/d391PRE9E39//3f//T0Tf3d//391PRN/d/////////////////////////////////w==",
+        "data": "hwQQABAAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////w==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
@@ -51,6 +51,11 @@
     },
     "tile10": {
         "data": "hwQQABAAAABE393f3f9EvETf3d/dT0S7RP//391PRKv/T0Tf/U9Eu91PRN/dT0S83U9P393//8v9T0T//9/du91PRE9E392r3U9ET0/f3bzdT09PRN/du91PRE9E39+63f//T0Tf3av/391PRN/dy0/f3U9E3927/////////////////////w==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile11": {
+        "data": "hwQQABAAAAD/////////v/////////+//////////6//////////v//u7u7u7u6+/+7u7u7u7s7/7u7u7u7uvv/u7u7u7u6u/+7u7u7u7r7/7u7uVe7uvv/u7u5V7u6+/+7u7u7u7q7/7u7u7u7uzv////////+//////////7//////////rw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },

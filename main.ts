@@ -2,13 +2,39 @@ namespace SpriteKind {
     export const BackgroundP = SpriteKind.create()
     export const Cursor = SpriteKind.create()
     export const save = SpriteKind.create()
+    export const menutalker = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSprite) {
-    if (controller.A.isPressed()) {
+    if (controller.B.isPressed()) {
         game.splash("Saving...")
         blockSettings.writeNumber("savediamond", 1)
         otherSprite.say(["If you ask me to save, who is going to save, for me?", "this game is easy enough. why do you need to save?", "HAHA. whats that on your head! its a poopoo!"], 1000)
     }
+})
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    Menu_text = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.menutalker)
+    Menu_text.say(info.score(), 1000)
+    pause(500)
+    Menu_text.say(info.highScore(), 1000)
+    pause(500)
+    Menu_text.destroy()
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     blockSettings.clear()
@@ -426,6 +452,7 @@ function StartGame () {
 let SaveDiamond: Sprite = null
 let Character: Sprite = null
 let NameCharacter = ""
+let Menu_text: Sprite = null
 let characterselectishappening = 0
 Title_page()
 forever(function () {

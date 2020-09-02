@@ -5,9 +5,9 @@ namespace SpriteKind {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSprite) {
     if (controller.A.isPressed()) {
-        otherSprite.say("Saving...", 1000)
+        game.splash("Saving...")
         blockSettings.writeNumber("savediamond", 1)
-        otherSprite.say("Done!", 200)
+        otherSprite.say(["If you ask me to save, who is going to save, for me?", "this game is easy enough. why do you need to save?", "HAHA. whats that on your head! its a poopoo!"], 1000)
     }
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {

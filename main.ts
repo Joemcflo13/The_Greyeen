@@ -5,38 +5,12 @@ namespace SpriteKind {
     export const menutalker = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSprite) {
-    game.setDialogCursor(img`
-        . . . . 7 7 7 7 7 7 7 . . . . . 
-        . . . 7 b b b b b b b 7 . . . . 
-        . . 7 b c 2 2 2 2 c c c 7 . . . 
-        . 7 b c c 2 b c 2 2 c c c 7 . . 
-        . 7 b c c 2 b c 2 2 c c c 7 . . 
-        . 7 b c c 2 c 2 2 c c c c 7 . . 
-        . 7 b c c 2 2 2 2 c c c c 7 . . 
-        . 7 b c c 2 b c 2 2 c c c 7 . . 
-        . 7 b c c 2 b c 2 2 c c c 7 . . 
-        . 7 b c c 2 c 2 2 c c c c 7 . . 
-        . . 7 b c 2 2 2 c c c c 7 . . . 
-        . . . 7 b b b c c c c 7 . . . . 
-        . . . . 7 7 7 7 7 7 7 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `)
-    if (controller.B.isPressed()) {
+    if (controller.A.isPressed()) {
         game.splash("Saving...")
         blockSettings.writeNumber("savediamond", 1)
+        game.showLongText("if you ask me to save you, then who is going to save for me?", DialogLayout.Bottom)
+        sprite.y += -24
     }
-})
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runMovementAnimation(
-    SaveDiamond,
-    animation.animationPresets(animation.flyToCenter),
-    50,
-    false
-    )
-    blockSettings.clear()
-    game.reset()
 })
 function BGM () {
     music.playTone(294, music.beat(BeatFraction.Half))
@@ -60,6 +34,7 @@ function BGM () {
     music.playTone(831, music.beat(BeatFraction.Double))
     music.playTone(587, music.beat(BeatFraction.Half))
     music.playTone(698, music.beat(BeatFraction.Quarter))
+    music.rest(music.beat(BeatFraction.Sixteenth))
     music.playTone(831, music.beat(BeatFraction.Double))
     music.playTone(440, music.beat(BeatFraction.Whole))
     music.playTone(349, music.beat(BeatFraction.Quarter))
@@ -432,6 +407,9 @@ controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.menutalker)
+    Menu_text.setFlag(SpriteFlag.StayInScreen, true)
+    Menu_text.setFlag(SpriteFlag.Ghost, true)
+    Menu_text.setFlag(SpriteFlag.RelativeToCamera, true)
     Menu_text.say(info.score(), 1000)
     pause(500)
     Menu_text.say(info.highScore(), 1000)
@@ -1484,10 +1462,10 @@ function StartGame () {
     SaveDiamond.setPosition(25, 80)
     Character.setFlag(SpriteFlag.ShowPhysics, true)
 }
+let SaveDiamond: Sprite = null
 let Menu_text: Sprite = null
 let Character: Sprite = null
 let NameCharacter = ""
-let SaveDiamond: Sprite = null
 let characterselectishappening = 0
 if (true) {
     Title_page()

@@ -18,6 +18,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.WallFloor, function (sprite, oth
         otherSprite.destroy(effects.fire, 500)
     }
 })
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    blockSettings.clear()
+    game.reset()
+})
 info.onCountdownEnd(function () {
     statusbar.value += -0.5
     info.startCountdown(0.01)
@@ -316,6 +320,7 @@ function Title_page () {
         `)
     NameCharacter = game.askForString("Name your character", 10)
     if (NameCharacter == "chandler") {
+        blockSettings.writeString("character", NameCharacter)
         game.splash("Hello Chandler", "Your stats have changed to Chandlers")
         Character = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -335,9 +340,9 @@ function Title_page () {
             . . . f f f f f f f f f . . . . 
             . . . . . . f f f f . . . . . . 
             `, SpriteKind.Player)
-        blockSettings.writeString("character", NameCharacter)
         StartGame()
     } else if (NameCharacter == "josh") {
+        blockSettings.writeString("character", NameCharacter)
         game.splash("Hello Josh", "Your stats have changed to Joshes")
         Character = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -357,9 +362,9 @@ function Title_page () {
             . . . d d d d d d d d d . . . . 
             . . . . . . d d d d . . . . . . 
             `, SpriteKind.Player)
-        blockSettings.writeString("character", NameCharacter)
         StartGame()
     } else if (NameCharacter == "lincoln") {
+        blockSettings.writeString("character", NameCharacter)
         game.splash("Hello Lincoln", "Your stats have changed to Lincolns")
         Character = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -379,9 +384,9 @@ function Title_page () {
             . . . 7 7 7 7 7 7 7 7 7 . . . . 
             . . . . . . 7 7 7 7 . . . . . . 
             `, SpriteKind.Player)
-        blockSettings.writeString("character", NameCharacter)
         StartGame()
     } else {
+        blockSettings.writeString("character", NameCharacter)
         game.splash("Hello " + NameCharacter)
         Character = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -401,7 +406,6 @@ function Title_page () {
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             `, SpriteKind.Player)
-        blockSettings.writeString("character", NameCharacter)
         StartGame()
     }
 }
@@ -1483,19 +1487,6 @@ function StartGame () {
     Character.setFlag(SpriteFlag.ShowPhysics, true)
     game.showLongText("Get to Class!, but still clean up some Greyeen!", DialogLayout.Bottom)
     info.startCountdown(10)
-}
-let Greyeengrowthfloor: Sprite = null
-let greyeengrowth: Sprite = null
-let SaveDiamond: Sprite = null
-let Menu_text: Sprite = null
-let Character: Sprite = null
-let NameCharacter = ""
-let statusbar: StatusBarSprite = null
-let characterselectishappening = 0
-if (blockSettings.exists("character")) {
-    Title_page()
-}
-game.onUpdateInterval(2000, function () {
     greyeengrowth = sprites.create(img`
         4 4 4 f d d d d d d d d f 4 4 4 
         4 4 7 f 7 7 7 7 7 7 7 7 f 4 7 4 
@@ -1532,6 +1523,22 @@ game.onUpdateInterval(2000, function () {
         c b b b c b b b c b a b b b a c 
         b b a b b c b a b b b a c b b b 
         `, SpriteKind.WallFloor)
+}
+let Greyeengrowthfloor: Sprite = null
+let greyeengrowth: Sprite = null
+let SaveDiamond: Sprite = null
+let Menu_text: Sprite = null
+let Character: Sprite = null
+let NameCharacter = ""
+let statusbar: StatusBarSprite = null
+let characterselectishappening = 0
+if (!(blockSettings.exists("character"))) {
+    Title_page()
+}
+if (blockSettings.exists("character")) {
+    StartGame()
+}
+game.onUpdateInterval(2000, function () {
     if (blockSettings.exists("savediamond")) {
         tiles.placeOnRandomTile(greyeengrowth, myTiles.tile1)
         tiles.placeOnRandomTile(Greyeengrowthfloor, myTiles.tile2)

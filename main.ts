@@ -3,6 +3,7 @@ namespace SpriteKind {
     export const Cursor = SpriteKind.create()
     export const save = SpriteKind.create()
     export const menutalker = SpriteKind.create()
+    export const WallFloor = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSprite) {
     if (controller.A.isPressed()) {
@@ -11,6 +12,15 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSpr
         game.showLongText("if you ask me to save you, then who is going to save for me?", DialogLayout.Bottom)
         sprite.y += -24
     }
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.WallFloor, function (sprite, otherSprite) {
+    if (controller.A.isPressed()) {
+        otherSprite.destroy(effects.fire, 500)
+    }
+})
+info.onCountdownEnd(function () {
+    statusbar.value += -0.5
+    info.startCountdown(0.01)
 })
 function BGM () {
     music.playTone(294, music.beat(BeatFraction.Half))
@@ -55,6 +65,9 @@ function BGM () {
     music.playTone(294, music.beat(BeatFraction.Quarter))
     music.playTone(349, music.beat(BeatFraction.Whole))
 }
+statusbars.onZero(StatusBarKind.Health, function (status) {
+    game.over(false, effects.melt)
+})
 function Title_page () {
     scene.setBackgroundImage(img`
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -322,6 +335,7 @@ function Title_page () {
             . . . f f f f f f f f f . . . . 
             . . . . . . f f f f . . . . . . 
             `, SpriteKind.Player)
+        blockSettings.writeString("character", NameCharacter)
         StartGame()
     } else if (NameCharacter == "josh") {
         game.splash("Hello Josh", "Your stats have changed to Joshes")
@@ -343,6 +357,7 @@ function Title_page () {
             . . . d d d d d d d d d . . . . 
             . . . . . . d d d d . . . . . . 
             `, SpriteKind.Player)
+        blockSettings.writeString("character", NameCharacter)
         StartGame()
     } else if (NameCharacter == "lincoln") {
         game.splash("Hello Lincoln", "Your stats have changed to Lincolns")
@@ -364,6 +379,7 @@ function Title_page () {
             . . . 7 7 7 7 7 7 7 7 7 . . . . 
             . . . . . . 7 7 7 7 . . . . . . 
             `, SpriteKind.Player)
+        blockSettings.writeString("character", NameCharacter)
         StartGame()
     } else {
         game.splash("Hello " + NameCharacter)
@@ -385,6 +401,7 @@ function Title_page () {
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             `, SpriteKind.Player)
+        blockSettings.writeString("character", NameCharacter)
         StartGame()
     }
 }
@@ -547,7 +564,7 @@ function StartGame () {
         2 . . . . . . . 2 . . 2 . . 2 2 
         2 . . . . . . . . . . . . . 2 2 
         2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile1,myTiles.tile4,myTiles.tile8,myTiles.tile11], TileScale.Sixteen))
+        `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile1,myTiles.tile4,myTiles.tile8,myTiles.tile11,myTiles.tile13], TileScale.Sixteen))
     SaveDiamond = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -1457,19 +1474,69 @@ function StartGame () {
     true
     )
     Character.z = 100
+    statusbar = statusbars.create(20, 4, StatusBarKind.Health)
+    statusbar.attachToSprite(Character)
+    statusbar.max = 100
     controller.moveSprite(Character)
     scene.cameraFollowSprite(Character)
     SaveDiamond.setPosition(25, 80)
     Character.setFlag(SpriteFlag.ShowPhysics, true)
+    game.showLongText("Get to Class!, but still clean up some Greyeen!", DialogLayout.Bottom)
+    info.startCountdown(10)
 }
+let Greyeengrowthfloor: Sprite = null
+let greyeengrowth: Sprite = null
 let SaveDiamond: Sprite = null
 let Menu_text: Sprite = null
 let Character: Sprite = null
 let NameCharacter = ""
+let statusbar: StatusBarSprite = null
 let characterselectishappening = 0
-if (true) {
+if (blockSettings.exists("character")) {
     Title_page()
 }
+game.onUpdateInterval(2000, function () {
+    greyeengrowth = sprites.create(img`
+        4 4 4 f d d d d d d d d f 4 4 4 
+        4 4 7 f 7 7 7 7 7 7 7 7 f 4 7 4 
+        f f f f f f f f f f f f f f f f 
+        d d f 4 4 4 4 4 4 4 4 f d d d f 
+        d d f 4 4 f 4 4 4 f 4 f d d d d 
+        7 d f 4 4 4 4 7 7 4 7 f d 7 7 7 
+        f f f f f f f f f f f f f f f f 
+        d d d d d d f 4 4 4 4 4 4 4 4 f 
+        d d d d d d f 4 f 4 4 4 4 4 4 f 
+        d d 7 f 7 d f 4 4 7 7 7 7 7 4 f 
+        f f f f f f f f f f f f f f f f 
+        f 4 4 4 4 f d d d d d d d d f 4 
+        4 4 4 4 4 f d d d d f d d d f 4 
+        4 7 7 7 7 f d d 7 d d d d d f 7 
+        f f 7 7 f f f f 7 7 f f f f f f 
+        4 4 4 f d d d d d 7 f d f 4 4 4 
+        `, SpriteKind.WallFloor)
+    Greyeengrowthfloor = sprites.create(img`
+        4 4 4 f d d d d d d d d f 4 4 4 
+        4 7 4 f 7 7 f d d 7 7 d f 4 4 7 
+        f f f f f f f f f f f f f f f f 
+        d d f 4 4 4 4 4 4 4 4 f d d d f 
+        d d f 4 4 f 4 7 4 f 4 f d d d d 
+        d d f 4 4 4 7 7 4 4 4 f d d d d 
+        f f f f f f 7 f f f f f f f f f 
+        d d d d d d f 4 4 4 7 4 7 4 4 f 
+        d d d d d d f 4 f 4 7 4 4 7 4 f 
+        d d 7 f 7 d f 4 4 4 7 4 4 7 7 f 
+        f f f f f f f f f f f f f f f f 
+        f 4 4 4 4 f d d d d d d d d f 4 
+        4 4 4 4 4 f d d d d f d d d f 4 
+        4 4 7 7 7 f d 7 7 7 7 d d d f 7 
+        c b b b c b b b c b a b b b a c 
+        b b a b b c b a b b b a c b b b 
+        `, SpriteKind.WallFloor)
+    if (blockSettings.exists("savediamond")) {
+        tiles.placeOnRandomTile(greyeengrowth, myTiles.tile1)
+        tiles.placeOnRandomTile(Greyeengrowthfloor, myTiles.tile2)
+    }
+})
 forever(function () {
     BGM()
 })

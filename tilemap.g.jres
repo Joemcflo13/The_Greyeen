@@ -10,22 +10,22 @@
         "tilemapTile": true
     },
     "tile2": {
-        "data": "hwQQABAAAABE393f3f9EvETf3d/dT0S7RP//391PRKv/T0Tf/U9Eu91PRN/dT0S83U9P393//8v9T0T//9/du91PRE9E392r3U9ET0/f3bzdT09PRN/du91PRE9E39+63f//T0Tf3av/391PRN/dy0Tf3U9E3927RN/dT0T//7pE/93//09EvA==",
+        "data": "hwQQABAAAAC8u7u7u7u7vLu6u7q7vLu7y7u7u7u7u6u7u7u7u7u6u7u7u7u7u7u8u7zLu6u7u7u7u7u7u7u7u7u7u7vLu7u7u7u7u7u7u7u6u7u7u7u7u7vLu7u7y7u6u7u6u7u7u7u7u7u7u7vLu7u7u7u8u7u7u7zLu7uru7q7q7u7u7u7uw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
     "tile3": {
-        "data": "hwQQABAAAAD/////////v/////////+//////////6//////////v/////////+////////1/8//7u7u7u7uvv/u7u7u7u6u/+7u7u7u7r7///////X/v/////////+//////////6//////////z/////////+//////////7//////////rw==",
+        "data": "hwQQABAAAABEu7u7u7y7S0S7vLu7u7tLRP///////0//7+7u7u7u/93v7u7u7u7f3e/u7u7u7t/d7+7u7u7u393v7u7u7u7f3e/u7u7u7t/d7+7u5e7u393v7u7u7u7f3f///////9//u7u7u7u7+0S7u7u7vLtLRLu7vLu7u0tEq7u7uru7TA==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
     "tile4": {
-        "data": "hwQQABAAAAD//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////w==",
+        "data": "hwQQABAAAABE393f3f9ET0Tf3d/dT0RP9P///////0/77u7u7u7+u/vu7u7u7v67++7u7u7u/rv77u7u7u7+u/vu7u7u7v67++7u7u7u/rv77u7u7u7+u/vu7l7u7v67++7u7u7u/rv//////////0Tf3U9E391PRN/dT0T//09E/93//09ETw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
     "tile5": {
-        "data": "hwQQABAAAAD/393f3f9ET//f3d/dT0RP////391PRE//T0Tf/U9E//9PRN/dT0Tf/09P393//9//T0T//9/d3/9PRE9E393f/09ET0/f3d//T09PRN/d3/9PRE9E39//////T0Tf3d//391PRN/d/////////////////////////////////w==",
+        "data": "hwQQABAAAABE393f3f9ET0TfXd/dT0RP5O7u7u7u7k/r7u7u7u7uu+vu7u7u7u67u7tbu7u7u7u7u7u7u7u7u7q7u7u7y7u7u7u7u7u7u7q7u7u6u7u7u7u8u7vLu7u7u7u7u7u7q7v//////////0Tf3U9E391PRN/dT0T//09E/93//09ETw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
@@ -55,7 +55,7 @@
         "tilemapTile": true
     },
     "tile11": {
-        "data": "hwQQABAAAAD/////////v/////////+//////////6//////////v//u7u7u7u6+/+7u7u7u7s7/7u7u7u7uvv/u7u7u7u6u/+7u7u7u7r7/7u7uVe7uvv/u7u5V7u6+/+7u7u7u7q7/7u7u7u7uzv////////+//////////7//////////rw==",
+        "data": "hwQQABAAAABEvLu7u7u6S0S7uru7u7tLRLu7u8u7u0v/y7u7u7q8+927q7u7u7vb3bu7W7u7u9vd7+7u7u7u393v7u7u7u7f3e/u7u7u7t/du7tbu7u72927u7u7vLv73au7vLu7q9v/u7u7u7u7+0S7u7u7u7tLRMu7u7y7u0tEu7u6u7q7Sw==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },

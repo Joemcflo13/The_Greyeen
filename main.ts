@@ -921,6 +921,91 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSpr
         true
         )
         SaveDiamond.setPosition(25, 80)
+        SaveDiamond.z = 100
+    }
+})
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 c 4 . . . . . . . 
+            . . . . . . 2 c 2 . . . . . . . 
+            . . . . . 4 2 c 2 4 . . . . . . 
+            . . . f 2 2 c 8 c 2 2 f . . . . 
+            . . . 8 8 c 8 c 8 c 8 8 . . . . 
+            . . . 8 8 8 8 c 8 8 8 8 . . . . 
+            . . . . 8 8 8 c 8 8 8 . . . . . 
+            . . . . f 8 c 8 c 8 f . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . 4 c . . . . . . . . 
+            . . . . . 4 2 c 2 . . . . . . . 
+            . . . . 4 4 2 c 2 . . . . . . . 
+            . . . f 2 2 c 8 c 2 2 f . . . . 
+            . . . 8 8 c 8 c 8 c 8 8 . . . . 
+            . . . 8 8 8 8 c 8 8 8 8 . . . . 
+            . . . . 8 8 8 c 8 8 8 . . . . . 
+            . . . . f 8 c 8 c 8 f . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f 8 8 8 . . . . . . 
+            . . . . . . . . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 c 4 . . . . . . . 
+            . . . . . . 2 c 2 . . . . . . . 
+            . . . . . 4 2 c 2 4 . . . . . . 
+            . . . f 2 2 c 8 c 2 2 f . . . . 
+            . . . 8 8 c 8 c 8 c 8 8 . . . . 
+            . . . 8 8 8 8 c 8 8 8 8 . . . . 
+            . . . . 8 8 8 c 8 8 8 . . . . . 
+            . . . . f 8 c 8 c 8 f . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . c 4 . . . . . . . 
+            . . . . . . 2 c 2 4 . . . . . . 
+            . . . . . . 2 c 2 4 4 . . . . . 
+            . . . f 2 2 c 8 c 2 2 f . . . . 
+            . . . 8 8 c 8 c 8 c 8 8 . . . . 
+            . . . 8 8 8 8 c 8 8 8 8 . . . . 
+            . . . . 8 8 8 c 8 8 8 . . . . . 
+            . . . . f 8 c 8 c 8 f . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 f f . . . . . . 
+            . . . . . f f . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.WallFloor, function (sprite, otherSprite) {
@@ -932,6 +1017,189 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.WallFloor, function (sprite, oth
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     blockSettings.clear()
     game.reset()
+})
+controller.down.onEvent(ControllerButtonEvent.Released, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . . 8 4 . . . . . . . 
+            . . . . . . 8 f 8 4 . . . . . . 
+            . . . . . . 8 2 f 4 4 . . . . . 
+            . . . f 2 2 8 f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f 8 8 8 . . . . . . 
+            . . . . . . . . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . . 8 4 . . . . . . . 
+            . . . . . . 8 f 8 4 . . . . . . 
+            . . . . . . 8 2 f 4 4 . . . . . 
+            . . . f 2 2 8 f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 4 . . . . . . 
+            . . . . . 4 2 f 2 4 4 . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 . f f . . . . . . 
+            . . . . . f f . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
+})
+controller.right.onEvent(ControllerButtonEvent.Released, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
+})
+controller.left.onEvent(ControllerButtonEvent.Released, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
 })
 info.onCountdownEnd(function () {
     statusbar.value += -0.5
@@ -982,6 +1250,123 @@ function BGM () {
 }
 statusbars.onZero(StatusBarKind.Health, function (status) {
     game.over(false, effects.melt)
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 . . . . . . . . 
+            . . . . . 4 8 f 8 . . . . . . . 
+            . . . . 4 4 f 2 8 . . . . . . . 
+            . . . f 2 2 f f 8 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f 8 8 8 . . . . . . 
+            . . . . . . . . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 . . . . . . . . 
+            . . . . . 4 8 f 8 . . . . . . . 
+            . . . . 4 4 f 2 8 . . . . . . . 
+            . . . f 2 2 f f 8 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 4 . . . . . . 
+            . . . . . 4 2 f 2 4 4 . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 . f f . . . . . . 
+            . . . . . f f . . 3 . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
+})
+controller.up.onEvent(ControllerButtonEvent.Released, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 c 4 . . . . . . . 
+            . . . . . . 2 c 2 . . . . . . . 
+            . . . . . 4 2 c 2 4 . . . . . . 
+            . . . f 2 2 c 8 c 2 2 f . . . . 
+            . . . 8 8 c 8 c 8 c 8 8 . . . . 
+            . . . 8 8 8 8 c 8 8 8 8 . . . . 
+            . . . . 8 8 8 c 8 8 8 . . . . . 
+            . . . . f 8 c 8 c 8 f . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
 })
 function Title_page () {
     scene.setBackgroundImage(img`
@@ -1301,25 +1686,109 @@ function Title_page () {
         game.splash("Hello " + NameCharacter)
         Character = sprites.create(img`
             . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . 5 5 5 . . . . . . . . . . . 
-            . . 5 3 3 5 5 5 . . . . . . . . 
-            . . 5 3 3 3 3 3 5 . . . . . . . 
-            . . 5 3 3 3 3 3 5 . . . . . . . 
-            . . 5 3 3 3 3 3 5 . . . . . . . 
-            . . 5 3 3 3 3 3 5 . . . . . . . 
-            . . . 5 3 3 3 3 5 . . . . . . . 
-            . . . 5 3 3 3 3 5 . . . . . . . 
-            . . . . 5 3 3 5 . . . . . . . . 
-            . . . . . 5 5 . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 c 4 . . . . . . . 
+            . . . . . . 2 c 2 . . . . . . . 
+            . . . . . 4 2 c 2 4 . . . . . . 
+            . . . f 2 2 c 8 c 2 2 f . . . . 
+            . . . 8 8 c 8 c 8 c 8 8 . . . . 
+            . . . 8 8 8 8 c 8 8 8 8 . . . . 
+            . . . . 8 8 8 c 8 8 8 . . . . . 
+            . . . . f 8 c 8 c 8 f . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 c 8 c 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
             . . . . . . . . . . . . . . . . 
             `, SpriteKind.Player)
         StartGame()
     }
 }
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (NameCharacter == "chandler") {
+    	
+    } else if (NameCharacter == "josh") {
+    	
+    } else if (NameCharacter == "lincoln") {
+    	
+    } else {
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . 4 8 . . . . . . . . 
+            . . . . . 4 8 f 8 . . . . . . . 
+            . . . . 4 4 f 2 8 . . . . . . . 
+            . . . f 2 2 f f 8 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f 8 8 8 . . . . . . 
+            . . . . . . . . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . 4 8 4 . . . . . . . 
+            . . . . . . 8 f 8 . . . . . . . 
+            . . . . . 4 2 f 2 4 . . . . . . 
+            . . . f 2 2 f f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . f f . f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 8 4 . . . . . . . 
+            . . . . . . 8 f 8 4 . . . . . . 
+            . . . . . . 8 2 f 4 4 . . . . . 
+            . . . f 2 2 8 f f 2 2 f . . . . 
+            . . . 8 8 8 8 f 8 8 8 8 . . . . 
+            . . . 8 8 8 8 8 8 8 8 8 . . . . 
+            . . . . 8 8 8 8 8 8 8 . . . . . 
+            . . . . f 8 8 8 8 8 f . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 8 8 . . . . . . 
+            . . . . . 8 8 8 f f . . . . . . 
+            . . . . . f f . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        200,
+        true
+        )
+    }
+})
 controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
     Menu_text = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -1471,7 +1940,7 @@ function StartGame () {
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         `)
-    tiles.setTilemap(tiles.createTilemap(hex`1000070000000000000000000000000000000000000503030303030307030307030307000008060606060606070606070606070000080606060606060706060706060700000806060606060607060607060607000004010101010101090101090101020000000000000000000000000000000000`, img`
+    tiles.setTilemap(tiles.createTilemap(hex`1000070002020202020202020202020202020202020101010101010102010102010102020201010101010101020101020101020202010101010101010201010201010202020101010101010102010102010102020201010101010101030101030101040102020202020202020202020202020202`, img`
         2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
         2 . . . . . . . 2 . . 2 . . 2 2 
         2 . . . . . . . 2 . . 2 . . 2 2 
@@ -1479,7 +1948,7 @@ function StartGame () {
         2 . . . . . . . 2 . . 2 . . 2 2 
         2 . . . . . . . . . . . . . 2 2 
         2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        `, [myTiles.transparency16,myTiles.tile2,myTiles.tile3,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile1,myTiles.tile4,myTiles.tile8,myTiles.tile11,myTiles.tile13], TileScale.Sixteen))
+        `, [myTiles.transparency16,myTiles.tile2,myTiles.tile1,myTiles.tile3,myTiles.tile11,myTiles.tile4,myTiles.tile5], TileScale.Sixteen))
     SaveDiamond = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -2388,29 +2857,53 @@ function StartGame () {
     50,
     true
     )
-    Character.z = 100
+    SaveDiamond.z = 100
+    Character.z = 101
     statusbar = statusbars.create(20, 4, StatusBarKind.Health)
     statusbar.attachToSprite(Character)
     statusbar.max = 100
-    controller.moveSprite(Character)
+    controller.moveSprite(Character, 100, 75)
     scene.cameraFollowSprite(Character)
     SaveDiamond.setPosition(25, 80)
     Character.setFlag(SpriteFlag.ShowPhysics, true)
     game.showLongText("Get to Class!, but still clean up some Greyeen!", DialogLayout.Bottom)
     info.startCountdown(90)
 }
-let Greyeengrowthfloor: Sprite = null
 let greyeengrowth: Sprite = null
+let Greyeengrowthfloor: Sprite = null
 let Menu_text: Sprite = null
+let statusbar: StatusBarSprite = null
 let Character: Sprite = null
 let NameCharacter = ""
-let statusbar: StatusBarSprite = null
 let SaveDiamond: Sprite = null
 let characterselectishappening = 0
 if (true) {
     Title_page()
 }
-game.onUpdateInterval(2000, function () {
+game.onUpdateInterval(2010, function () {
+    Greyeengrowthfloor = sprites.create(img`
+        c b b b 7 7 7 b b a b b b b b b 
+        b b c b b b 7 b b b b 7 b b 7 b 
+        b a b b b c 7 7 b b b 7 7 7 c b 
+        b b b b 7 b b b b b c b b 7 b a 
+        b 7 b b b 7 7 b b b b a b 7 b b 
+        b 7 7 b b c 7 7 b 7 b b b 7 c b 
+        b a 7 7 b b b 7 b b b b b 7 b b 
+        b b b 7 b b b 7 b b b b b 7 b b 
+        b b b 7 b b b b b b b b b 7 b b 
+        b b b 7 7 a b c b b b b b 7 b b 
+        b c b b 7 7 b b b 7 7 7 b b b b 
+        b b b b b 7 7 b b b c 7 b b a b 
+        7 7 b a b b 7 b b b b 7 b b b 7 
+        b 7 b b b b 7 b b b b 7 7 b b b 
+        c b 7 b c b b b 7 b a b 7 7 a b 
+        b b a b b b b b b b b b b b b b 
+        `, SpriteKind.WallFloor)
+    if (blockSettings.exists("character")) {
+        tiles.placeOnRandomTile(Greyeengrowthfloor, myTiles.tile2)
+    }
+})
+game.onUpdateInterval(1000, function () {
     greyeengrowth = sprites.create(img`
         4 4 4 f d d d d d d d d f 4 4 4 
         4 4 7 f 7 7 7 7 7 7 7 7 f 4 7 4 
@@ -2429,29 +2922,13 @@ game.onUpdateInterval(2000, function () {
         f f 7 7 f f f f 7 7 f f f f f f 
         4 4 4 f d d d d d 7 f d f 4 4 4 
         `, SpriteKind.WallFloor)
-    Greyeengrowthfloor = sprites.create(img`
-        4 4 4 f d d d d d d d d f 4 4 4 
-        4 7 4 f 7 7 f d d 7 7 d f 4 4 7 
-        f f f f f f f f f f f f f f f f 
-        d d f 4 4 4 4 4 4 4 4 f d d d f 
-        d d f 4 4 f 4 7 4 f 4 f d d d d 
-        d d f 4 4 4 7 7 4 4 4 f d d d d 
-        f f f f f f 7 f f f f f f f f f 
-        d d d d d d f 4 4 4 7 4 7 4 4 f 
-        d d d d d d f 4 f 4 7 4 4 7 4 f 
-        d d 7 f 7 d f 4 4 4 7 4 4 7 7 f 
-        f f f f f f f f f f f f f f f f 
-        f 4 4 4 4 f d d d d d d d d f 4 
-        4 4 4 4 4 f d d d d f d d d f 4 
-        4 4 7 7 7 f d 7 7 7 7 d d d f 7 
-        c b b b c b b b c b a b b b a c 
-        b b a b b c b a b b b a c b b b 
-        `, SpriteKind.WallFloor)
     if (blockSettings.exists("character")) {
         tiles.placeOnRandomTile(greyeengrowth, myTiles.tile1)
-        tiles.placeOnRandomTile(Greyeengrowthfloor, myTiles.tile2)
     }
 })
 forever(function () {
     BGM()
+    if (info.score() >= 42) {
+    	
+    }
 })

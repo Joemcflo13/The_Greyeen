@@ -9,8 +9,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSpr
     if (controller.A.isPressed()) {
         game.splash("Saving...")
         blockSettings.writeNumber("savediamond", info.score())
-        game.showLongText("if you ask me to save you, then who is going to save for me?", DialogLayout.Bottom)
         otherSprite.destroy()
+        game.showLongText("if you ask me to save you, then who is going to save for me?", DialogLayout.Bottom)
         pause(1000)
         SaveDiamond = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -928,7 +928,63 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f e e e e e e e f f . 
+            f f e f e e e e e e f f 
+            f f f e e e e e e e e f 
+            f f f e e e e e e f e f 
+            f f f f e e e e f f f f 
+            f f f f f f f f f f f f 
+            f f f f f f f f f f f f 
+            . f f f f f f f f f f . 
+            . e f f f f f f f f e . 
+            e 4 f b b b b b b f 4 e 
+            4 d f d d d d d d c d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f e e e e e e e f f . 
+            f e e f e e e e e e f f 
+            f f f e e e e e e e e f 
+            f f e e e e e e e f e f 
+            f f f e e e e f f f f f 
+            f f f f f f f f f f f f 
+            f f f f f f f f f f f f 
+            . f f f f f f f f f f . 
+            . e f f f f f f f f e . 
+            . 4 f b b b b b f e 4 e 
+            . 4 f d d d d d e d d 4 
+            . e f f f f f f e e 4 . 
+            . . f f f . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f e e e e e e e f f . 
+            f f e f e e e e e e f f 
+            f f f e e e e e e e e f 
+            f f f f e e e e e f e f 
+            f f f f f e e e e f f f 
+            f f f f f f f f f f f f 
+            f f f f f f f f f f f f 
+            . f f f f f f f f f f . 
+            . e f f f f f f f f e . 
+            e 4 e f b b b b b f 4 . 
+            4 d d e d d d d d f 4 . 
+            . 4 e e f f f f f f e . 
+            . . . . . . . f f f . . 
+            `],
+        100,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1022,7 +1078,29 @@ controller.down.onEvent(ControllerButtonEvent.Released, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f f e e e e e e f f . 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            . f e d d b b d d e f . 
+            . f f e 4 4 4 4 e f f . 
+            e 4 f b 1 1 1 1 b f 4 e 
+            4 d f 1 1 1 1 1 1 f d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
+            `],
+        200,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1055,7 +1133,63 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . f f f f f . . . . 
+            . . f e e e e e f f . . 
+            . f e e e e e e e f f . 
+            f e e e e e e e f f f f 
+            f e e 4 e e e f f f f f 
+            f e e 4 4 e e e f f f f 
+            f f e 4 4 4 4 4 f f f f 
+            f f e 4 4 f f 4 e 4 f f 
+            . f f d d d d 4 d 4 f . 
+            . . f b b d d 4 f f f . 
+            . . f e 4 4 4 e e f . . 
+            . . f 1 1 1 e d d 4 . . 
+            . . f 1 1 1 e d d e . . 
+            . . f 6 6 6 f e e f . . 
+            . . . f f f f f f . . . 
+            . . . . . f f f . . . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . f f f f f f . . . 
+            . . f e e e e e f f f . 
+            . f e e e e e e e f f f 
+            f e e e e e e e f f f f 
+            f e e 4 e e e f f f f f 
+            f e e 4 4 e e e f f f f 
+            f f e 4 4 4 4 4 f f f f 
+            . f e 4 4 f f 4 e 4 f f 
+            . . f d d d d 4 d 4 f . 
+            . . f b b d e e f f f . 
+            . . f e 4 e d d 4 f . . 
+            . . f 1 1 e d d e f . . 
+            . f f 6 6 f e e f f f . 
+            . f f f f f f f f f f . 
+            . . f f f . . . f f . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . f f f f f f . . . 
+            . . f e e e e e f f f . 
+            . f e e e e e e e f f f 
+            f e e e e e e e f f f f 
+            f e e 4 e e e f f f f f 
+            f e e 4 4 e e e f f f f 
+            f f e 4 4 4 4 4 f f f f 
+            . f e 4 4 f f 4 e 4 f f 
+            . . f d d d d 4 d 4 f f 
+            . . f b b d d 4 f f f . 
+            . . f e 4 4 4 e d d 4 . 
+            . . f 1 1 1 1 e d d e . 
+            . f f 6 6 6 6 f e e f . 
+            . f f f f f f f f f f . 
+            . . f f f . . . f f . . 
+            `],
+        100,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1139,7 +1273,29 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f f e e e e e e f f . 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            . f e d d b b d d e f . 
+            . f f e 4 4 4 4 e f f . 
+            e 4 f b 1 1 1 1 b f 4 e 
+            4 d f 1 1 1 1 1 1 f d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
+            `],
+        200,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1172,7 +1328,29 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f f e e e e e e f f . 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            . f e d d b b d d e f . 
+            . f f e 4 4 4 4 e f f . 
+            e 4 f b 1 1 1 1 b f 4 e 
+            4 d f 1 1 1 1 1 1 f d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
+            `],
+        200,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1255,7 +1433,63 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . . . . . . . . . 
+            . . . f f f f f f . . . 
+            . f f f e e e e e f . . 
+            f f f e e e e e e e f . 
+            f f f f e e e e e e e f 
+            f f f f f e e e 4 e e f 
+            f f f f e e e 4 4 e e f 
+            f f f f 4 4 4 4 4 e f f 
+            f f 4 e 4 f f 4 4 e f . 
+            f f 4 d 4 d d d d f . . 
+            . f f f 4 d d b b f . . 
+            . 4 d d e 4 4 4 e f . . 
+            . e d d e 1 1 1 1 f . . 
+            . f e e f 6 6 6 6 f f . 
+            . f f f f f f f f f f . 
+            . . f f . . . f f f . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . f f f f f f . . . 
+            . f f f e e e e e f . . 
+            f f f e e e e e e e f . 
+            f f f f e e e e e e e f 
+            f f f f f e e e 4 e e f 
+            f f f f e e e 4 4 e e f 
+            f f f f 4 4 4 4 4 e f f 
+            f f 4 e 4 f f 4 4 e f . 
+            . f 4 d 4 d d d d f . . 
+            . f f f e e d b b f . . 
+            . . f 4 d d e 4 e f . . 
+            . . f e d d e 1 1 f . . 
+            . f f f e e f 6 6 f f . 
+            . f f f f f f f f f f . 
+            . . f f . . . f f f . . 
+            `,img`
+            . . . . f f f f f . . . 
+            . . f f e e e e e f . . 
+            . f f e e e e e e e f . 
+            f f f f e e e e e e e f 
+            f f f f f e e e 4 e e f 
+            f f f f e e e 4 4 e e f 
+            f f f f 4 4 4 4 4 e f f 
+            f f 4 e 4 f f 4 4 e f f 
+            . f 4 d 4 d d d d f f . 
+            . f f f 4 d d b b f . . 
+            . . f e e 4 4 4 e f . . 
+            . . 4 d d e 1 1 1 f . . 
+            . . e d d e 1 1 1 f . . 
+            . . f e e f 6 6 6 f . . 
+            . . . f f f f f f . . . 
+            . . . . f f f . . . . . 
+            `],
+        100,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1339,7 +1573,29 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f e e e e e e e f f . 
+            f f e f e e e e e e f f 
+            f f f e e e e e e e e f 
+            f f f e e e e e e f e f 
+            f f f f e e e e f f f f 
+            f f f f f f f f f f f f 
+            f f f f f f f f f f f f 
+            . f f f f f f f f f f . 
+            . e f f f f f f f f e . 
+            e 4 f b b b b b b f 4 e 
+            4 d f d d d d d d c d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
+            `],
+        200,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1641,22 +1897,22 @@ function Title_page () {
         blockSettings.writeString("character", NameCharacter)
         game.splash("Hello Josh", "Your stats have changed to Joshes")
         Character = sprites.create(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . d d d d . . . . . . 
-            . . . . . . d d 9 d d . . . . . 
-            . . . . . d d 9 9 9 d . . . . . 
-            . . . . . d 9 9 9 9 d . . . . . 
-            . . . . . d 9 9 9 9 d . . . . . 
-            . . . . . d d d 9 d . . . . . . 
-            . . . . . d d d d d . d d . . . 
-            . . . . d d d d d d d d d . . . 
-            . . . . d d d d d d d d d . . . 
-            . . . d d d d d d d d d d . . . 
-            . . . d d d d d d d d d . . . . 
-            . . . d d d d d d d d d . . . . 
-            . . . d d d d d d d d d . . . . 
-            . . . . . . d d d d . . . . . . 
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f f e e e e e e f f . 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            . f e d d b b d d e f . 
+            . f f e 4 4 4 4 e f f . 
+            e 4 f b 1 1 1 1 b f 4 e 
+            4 d f 1 1 1 1 1 1 f d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
             `, SpriteKind.Player)
         StartGame()
     } else if (NameCharacter == "lincoln") {
@@ -1709,7 +1965,63 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     if (NameCharacter == "chandler") {
     	
     } else if (NameCharacter == "josh") {
-    	
+        animation.runImageAnimation(
+        Character,
+        [img`
+            . . . . f f f f . . . . 
+            . . f f e e e e f f . . 
+            . f f e e e e e e f f . 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            . f e d d b b d d e f . 
+            . f f e 4 4 4 4 e f f . 
+            e 4 f b 1 1 1 1 b f 4 e 
+            4 d f 1 1 1 1 1 1 f d 4 
+            4 4 f 6 6 6 6 6 6 f 4 4 
+            . . . f f f f f f . . . 
+            . . . f f . . f f . . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . f f f f f f . . . 
+            . f f f e e e e f f f . 
+            f f f e e e e e e f f f 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            . f e d d b b d 4 e f e 
+            f f f e 4 4 4 4 d d 4 e 
+            e 4 f b 1 1 1 e d d e . 
+            . . f 6 6 6 6 f e e . . 
+            . . f f f f f f f . . . 
+            . . f f f . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . 
+            . . . f f f f f f . . . 
+            . f f f e e e e f f f . 
+            f f f e e e e e e f f f 
+            f f f f 4 e e e f f f f 
+            f f f 4 4 4 e e f f f f 
+            f f f 4 4 4 4 e e f f f 
+            f 4 e 4 4 4 4 4 4 e 4 f 
+            f 4 4 f f 4 4 f f 4 4 f 
+            f e 4 d d d d d d 4 e f 
+            e f e 4 d b b d d e f . 
+            e 4 d d 4 4 4 4 e f f f 
+            . e d d e 1 1 1 b f 4 e 
+            . . e e f 6 6 6 6 f . . 
+            . . . f f f f f f f . . 
+            . . . . . . . f f f . . 
+            `],
+        100,
+        true
+        )
     } else if (NameCharacter == "lincoln") {
     	
     } else {
@@ -1940,15 +2252,7 @@ function StartGame () {
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
         `)
-    tiles.setTilemap(tiles.createTilemap(hex`1000070002020202020202020202020202020202020101010101010102010102010102020201010101010101020101020101020202010101010101010201010201010202020101010101010102010102010102020201010101010101030101030101040102020202020202020202020202020202`, img`
-        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        2 . . . . . . . 2 . . 2 . . 2 2 
-        2 . . . . . . . 2 . . 2 . . 2 2 
-        2 . . . . . . . 2 . . 2 . . 2 2 
-        2 . . . . . . . 2 . . 2 . . 2 2 
-        2 . . . . . . . . . . . . . 2 2 
-        2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-        `, [myTiles.transparency16,myTiles.tile2,myTiles.tile1,myTiles.tile3,myTiles.tile11,myTiles.tile4,myTiles.tile5], TileScale.Sixteen))
+    tiles.setTilemap(tilemap`level_1`)
     SaveDiamond = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -2869,6 +3173,7 @@ function StartGame () {
     game.showLongText("Get to Class!, but still clean up some Greyeen!", DialogLayout.Bottom)
     info.startCountdown(90)
 }
+let greyeengrowthfloor2: Sprite = null
 let greyeengrowth: Sprite = null
 let Greyeengrowthfloor: Sprite = null
 let Menu_text: Sprite = null
@@ -2900,7 +3205,7 @@ game.onUpdateInterval(2010, function () {
         b b a b b b b b b b b b b b b b 
         `, SpriteKind.WallFloor)
     if (blockSettings.exists("character")) {
-        tiles.placeOnRandomTile(Greyeengrowthfloor, myTiles.tile2)
+        tiles.placeOnRandomTile(Greyeengrowthfloor, myTiles.tile14)
     }
 })
 game.onUpdateInterval(1000, function () {
@@ -2930,5 +3235,28 @@ forever(function () {
     BGM()
     if (info.score() >= 42) {
     	
+    }
+})
+game.onUpdateInterval(500, function () {
+    greyeengrowthfloor2 = sprites.create(img`
+        e e e e e d 7 7 e e e e e d d d 
+        e d d 7 e d d 7 e d d e e d d d 
+        e d d 7 e d d 7 e d d 7 e d d d 
+        e d d 7 e e e e e d d 7 e e e e 
+        e e e e e 7 d d e e e e e e 7 d 
+        e 7 d e e 7 7 d e d e 7 e 7 7 d 
+        e 7 d d e d d d e d d 7 e d d d 
+        e 7 7 d e e e e e d d 7 e e e e 
+        e e e e e d d 7 e e e e e 7 7 d 
+        e d 7 d e d e 7 e d d d e 7 d d 
+        e d 7 d e d 7 7 e 7 7 7 e 7 e d 
+        e e d d e e e e e 7 e 7 e e e e 
+        e e e e e d d d e e e e e 7 7 d 
+        e d d d e d d e e d 7 7 e 7 d d 
+        e d d d e d d d e d d 7 e 7 d d 
+        e d e d e e e e e d d 7 e e e e 
+        `, SpriteKind.WallFloor)
+    if (blockSettings.exists("character")) {
+        tiles.placeOnRandomTile(greyeengrowthfloor2, myTiles.tile2)
     }
 })

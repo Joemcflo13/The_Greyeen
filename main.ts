@@ -10,8 +10,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.save, function (sprite, otherSpr
         game.splash("Saving...")
         blockSettings.writeNumber("savediamond", info.score())
         otherSprite.destroy()
-        game.showLongText("if you ask me to save you, then who is going to save for me?", DialogLayout.Bottom)
-        pause(1000)
+        controller.moveSprite(sprite, 0, 0)
+        sprite.y += -19
+        timer.after(1000, function () {
+            controller.moveSprite(sprite, 100, 75)
+        })
+        story.startConveration(function () {
+            story.printCharacterText("if you ask me to save you, then who is going to save for me?", "Save Diamond")
+        })
         SaveDiamond = sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 

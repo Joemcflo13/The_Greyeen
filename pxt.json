@@ -8,7 +8,9 @@
         "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
         "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.2.10",
         "animation": "*",
-        "grafxkid-tiles": "github:riknoll/grafxkid-tiles#v2.0.1"
+        "grafxkid-tiles": "github:riknoll/grafxkid-tiles#v2.0.1",
+        "story": "github:riknoll/arcade-story#v1.3.0",
+        "Timers": "github:microsoft/arcade-timers#v1.1.0"
     },
     "files": [
         "main.blocks",
@@ -21,7 +23,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.2.6",
+        "target": "1.2.10",
         "targetId": "arcade"
     },
     "supportedTargets": [
